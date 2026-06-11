@@ -86,7 +86,7 @@ main { padding-top: 0; }
 #slide-1 { background: var(--color-gradient); color: white; position: relative; }
 #slide-1 h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 10px; }
 #slide-1 .subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 40px; }
-#slide-1 .hero-svg { position: absolute; top: 80px; right: 5%; width: clamp(100px, 15vw, 200px); }
+#slide-1 .hero-svg { position: absolute; top: 30px; right: 5%; }
 #slide-1 .slide-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
 #slide-1 .slide-footer .placeholder-box { border-color: rgba(255,255,255,0.5); color: white; background: rgba(0,0,0,0.1); }
 
