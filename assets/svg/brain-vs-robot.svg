@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Brain vs Robot -->
+  <path d="M 50 100 Q 100 50 150 100 Q 100 150 50 100" fill="none" stroke="#1a1a6e" stroke-width="4"/>
+  <circle cx="100" cy="100" r="30" fill="#6a0dad"/>
+  <rect x="250" y="70" width="80" height="60" rx="10" fill="none" stroke="#1a1a6e" stroke-width="4"/>
+  <circle cx="275" cy="90" r="8" fill="#6a0dad"/>
+  <circle cx="305" cy="90" r="8" fill="#6a0dad"/>
+  <line x1="265" y1="115" x2="315" y2="115" stroke="#1a1a6e" stroke-width="4"/>
+  <text x="180" y="115" font-size="40" font-family="sans-serif" fill="#1a1a6e">≠</text>
+</svg>

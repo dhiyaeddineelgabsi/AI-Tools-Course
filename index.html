@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>L'IA au service de l'enseignement — Formation Intégrale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a1a6e">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+
+  <nav id="sidebar-menu">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <h3 style="margin: 0;">Sommaire</h3>
+      <button id="close-menu" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❌</button>
+    </div>
+    <ul>
+      <li><a href="#slide-1">1. L'IA au service de l'enseignement</a></li>
+      <li><a href="#slide-4">4. Définition</a></li>
+      <li><a href="#slide-8">8. Partie 2 : Le prompt</a></li>
+      <li><a href="#slide-16">16. Les 8 Outils</a></li>
+      <li><a href="#slide-25">25. Focus Pratique</a></li>
+      <li><a href="#slide-30">30. À retenir</a></li>
+      <li><a href="#slide-34">34. Fin</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="slide" id="slide-1" data-slide="1">
+      <img src="assets/logos/logo_integrale-removebg-preview.png" alt="Logo Intégrale" class="hero-svg" style="width: clamp(150px, 20vw, 300px);">
+      <div class="title-container">
+        <h1>L'IA au service de l'enseignement</h1>
+        <p class="subtitle">Formation pour enseignants du primaire et collège</p>
+      </div>
+      <div class="slide-footer">
+        <div class="credentials">Formateur : Dhiya Eddine El Gabsi — 13 Juin 2025 — École Privée Intégrale</div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-2" data-slide="2">
+      <h2>Est-ce que vous utilisez déjà l'IA sans le savoir ?</h2>
+      <div class="grid-2x2">
+        <div class="card-logo">
+          <img src="https://www.google.com/s2/favicons?domain=netflix.com&sz=128" alt="Netflix" onerror="this.style.display='none'">
+          <p>Netflix recommande des films selon tes habitudes</p>
+        </div>
+        <div class="card-logo">
+          <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=128" alt="YouTube" onerror="this.style.display='none'">
+          <p>YouTube choisit la prochaine vidéo pour toi</p>
+        </div>
+        <div class="card-logo">
+          <img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" alt="Google" onerror="this.style.display='none'">
+          <p>Google Maps prédit les embouteillages</p>
+        </div>
+        <div class="card-logo">
+          <img src="https://www.google.com/s2/favicons?domain=apple.com&sz=128" alt="Apple" onerror="this.style.display='none'">
+          <p>Le correcteur complète tes phrases</p>
+        </div>
+      </div>
+      <p class="bold-conclusion">Vous utilisez déjà l'IA tous les jours — aujourd'hui on va juste aller plus loin</p>
+    </section>
+
+    <section class="slide" id="slide-3" data-slide="3">
+      <h2>C'est quoi l'intelligence artificielle ?</h2>
+      <a href="https://youtu.be/yQLmgw3rClM" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/yQLmgw3rClM/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/yQLmgw3rClM/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="presenter-note">🎤 Après la vidéo, poser la question : qu'est-ce que vous avez retenu ?</div>
+    </section>
+
+    <section class="slide" id="slide-4" data-slide="4">
+      <h2>L'IA en une phrase</h2>
+      <div class="split-content">
+        <div>
+          <div class="quote-box">"Une machine qui apprend à partir d'exemples pour produire des résultats intelligents"</div>
+          <ul>
+            <li>Ce n'est pas magique, c'est statistique</li>
+            <li>Elle a lu presque tout Internet</li>
+          </ul>
+        </div>
+        <img src="assets/svg/brain-vs-robot.svg" alt="Cerveau vs Robot">
+      </div>
+    </section>
+
+    <section class="slide" id="slide-5" data-slide="5">
+      <h2>L'IA : 70 ans d'histoire en 4 étapes</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">1950</div>
+          <p>Alan Turing 👨‍💻</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">1997</div>
+          <p>Deep Blue ♟️</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2012</div>
+          <p>Deep Learning 🧠</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2022</div>
+          <p>ChatGPT 💬</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-6" data-slide="6">
+      <h2>L'évolution de l'IA en images</h2>
+      <a href="https://youtu.be/RT0E47dUZKw" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/RT0E47dUZKw/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/RT0E47dUZKw/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+    </section>
+
+    <section class="slide" id="slide-7" data-slide="7">
+      <h2>L'IA entre dans les salles de classe</h2>
+      <div class="split-content">
+        <div>
+          <div class="stats-box">
+            <div class="stat-item"><span class="stat-number">62 %</span> des enseignants utilisent l'IA pour créer des ressources</div>
+            <div class="stat-item"><span class="stat-number">80 %</span> n'ont reçu <strong>aucune</strong> formation à l'IA</div>
+            <div class="stat-item"><span class="stat-number">7-10h</span> économisées par semaine avec les outils IA</div>
+            <div class="stat-item"><span class="stat-number">78 %</span> demandent des formations à l'IA</div>
+          </div>
+          <ul>
+            <li>Les élèves l'utilisent déjà</li>
+            <li>Les enseignants s'en emparent pour gagner du temps</li>
+          </ul>
+          <p class="highlight-phrase">L'objectif : Mieux enseigner, moins s'épuiser.</p>
+        </div>
+        <img src="assets/svg/classroom.svg" alt="Salles de classe">
+      </div>
+    </section>
+
+    <section class="slide part-title" id="slide-8" data-slide="8">
+      <h2>Comment parler à l'IA pour obtenir ce qu'on veut</h2>
+      <p class="subtitle">Le prompt : votre outil le plus puissant</p>
+      <img src="assets/svg/human-robot.svg" alt="Humain et IA">
+    </section>
+
+    <section class="slide" id="slide-9" data-slide="9">
+      <h2>C'est quoi un prompt ?</h2>
+      <p class="huge-text">C'est simplement la consigne que vous donnez à l'IA.</p>
+      <ul>
+        <li>Comme un stagiaire brillant mais qui ne sait rien de vous</li>
+        <li>La qualité de la réponse dépend de la qualité de la question</li>
+      </ul>
+      <div style="text-align: center; margin-top: 30px;">
+        <img src="assets/svg/prompt-bubble.svg" style="max-width: 300px;" alt="Prompt">
+      </div>
+    </section>
+
+    <section class="slide" id="slide-10" data-slide="10">
+      <h2>Règle 1 : Sois précis</h2>
+      <div class="rules-grid">
+        <div class="rule-bad">❌ Fais-moi un exercice sur les fractions.</div>
+        <div class="rule-good">✅ Crée 5 exercices sur l'addition de fractions avec le même dénominateur pour des élèves de CM1.</div>
+      </div>
+      <p class="key-message">💡 Message clé : Ne la laissez pas deviner votre intention.</p>
+    </section>
+
+    <section class="slide" id="slide-11" data-slide="11">
+      <h2>Règle 2 : Donne le contexte</h2>
+      <div class="rules-grid">
+        <div class="rule-bad">❌ Explique le cycle de l'eau.</div>
+        <div class="rule-good">✅ Explique le cycle de l'eau à un enfant de 6 ans en utilisant l'histoire d'une petite goutte d'eau.</div>
+      </div>
+      <p class="key-message">💡 Message clé : Précisez toujours pour qui et dans quel but.</p>
+    </section>
+
+    <section class="slide" id="slide-12" data-slide="12">
+      <h2>Règle 3 : Fixe le format</h2>
+      <div class="rules-grid">
+        <div class="rule-bad">❌ Donne-moi des idées de sorties.</div>
+        <div class="rule-good">✅ Propose 3 idées de sorties scolaires à Paris, sous forme de tableau avec : lieu, budget, durée.</div>
+      </div>
+      <p class="key-message">💡 Message clé : Demandez des listes, des tableaux, ou des paragraphes courts.</p>
+    </section>
+
+    <section class="slide" id="slide-13" data-slide="13">
+      <h2>Règle 4 : Sois court et direct</h2>
+      <div class="rules-grid">
+        <div class="rule-bad">❌ Salut IA, j'espère que tu vas bien, pourrais-tu s'il te plaît m'aider à...</div>
+        <div class="rule-good">✅ Rédige un email aux parents pour rappeler la réunion de rentrée du 4 septembre à 18h. Ton poli.</div>
+      </div>
+      <p class="key-message">💡 Message clé : L'IA n'a pas besoin de politesse, soyez direct.</p>
+    </section>
+
+    <section class="slide" id="slide-14" data-slide="14">
+      <h2>La formule magique</h2>
+      <div class="magic-formula">Rôle + Tâche + Contexte + Format + Ton</div>
+      <div class="components-grid">
+        <div class="component-card"><span>🧪</span>Rôle<br>"Agis comme un expert..."</div>
+        <div class="component-card"><span>📖</span>Tâche<br>"Rédige..."</div>
+        <div class="component-card"><span>📋</span>Contexte<br>"Pour des élèves..."</div>
+        <div class="component-card"><span>📧</span>Format<br>"En tableau..."</div>
+        <div class="component-card"><span>🎨</span>Ton<br>"Bienveillant..."</div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-15" data-slide="15">
+      <h2>Les erreurs à éviter</h2>
+      <div class="errors-list">
+        <div class="error-card">❌ Demander des choses illégales ou inappropriées</div>
+        <div class="error-card">❌ Partager des données personnelles d'élèves</div>
+        <div class="error-card">❌ Croire tout ce que l'IA dit (les hallucinations)</div>
+        <div class="error-card">❌ Prendre le premier résultat sans l'adapter</div>
+      </div>
+    </section>
+
+    <section class="slide pause-slide" id="pause-1">
+      <h2>☕ Pause — 10 minutes</h2>
+      <p>On reprend dans 10 minutes avec les 8 outils IA</p>
+    </section>
+
+    <section class="slide tool-slide" id="slide-16" data-slide="16">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="ChatGPT">
+        <span class="tool-logo-fallback">C</span>
+        <div class="tool-title-block">
+          <h2>ChatGPT</h2>
+          <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/Wg9M140pduU" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/Wg9M140pduU/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/Wg9M140pduU/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> L'assistant conversationnel le plus connu et le plus polyvalent.</div>
+      <ul class="tool-features">
+        <li>Génération de textes (cours, emails)</li>
+        <li>Création d'exercices</li>
+        <li>Correction de textes</li>
+      </ul>
+      <div class="tool-example">Ex: "Agis comme un correcteur impitoyable et corrige ce texte d'élève en expliquant les fautes."</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-17" data-slide="17">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="NotebookLM">
+        <span class="tool-logo-fallback">N</span>
+        <div class="tool-title-block">
+          <h2>NotebookLM</h2>
+          <a href="https://notebooklm.google.com" target="_blank" rel="noopener">notebooklm.google.com</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/OJKOmTm91vc" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/OJKOmTm91vc/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/OJKOmTm91vc/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> L'IA de Google qui ne lit que les documents que VOUS lui donnez.</div>
+      <ul class="tool-features">
+        <li>Zéro hallucination</li>
+        <li>Génère des quiz basés strictement sur le cours</li>
+        <li>Peut créer un podcast audio à partir de notes</li>
+      </ul>
+      <div class="tool-example">Ex: Fournir le PDF d'histoire, demander un QCM de 10 questions.</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-18" data-slide="18">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Gamma">
+        <span class="tool-logo-fallback">G</span>
+        <div class="tool-title-block">
+          <h2>Gamma AI</h2>
+          <a href="https://gamma.app" target="_blank" rel="noopener">gamma.app</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/KcbXKUR7-a0" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/KcbXKUR7-a0/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/KcbXKUR7-a0/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> Un outil de création de présentations, documents et pages web générés par IA en quelques secondes.</div>
+      <ul class="tool-features">
+        <li>Génération de présentations complètes à partir d'un simple prompt</li>
+        <li>Design professionnel sans effort</li>
+        <li>Export PDF/PPT et partage en ligne</li>
+      </ul>
+      <div class="tool-example">Ex: "Crée une présentation de 5 slides sur le système solaire pour des élèves de CM1."</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-19" data-slide="19">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Canva">
+        <span class="tool-logo-fallback">C</span>
+        <div class="tool-title-block">
+          <h2>Canva Education</h2>
+          <a href="https://www.canva.com/education" target="_blank" rel="noopener">canva.com/education</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/Fh7OH90vIzU" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/Fh7OH90vIzU/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/Fh7OH90vIzU/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> L'outil de design n°1, dopé à l'IA Magique.</div>
+      <ul class="tool-features">
+        <li>Création de supports visuels magnifiques en 1 clic</li>
+        <li>Génération d'images sur mesure pour illustrer un cours</li>
+        <li>Suppression de fond instantanée</li>
+      </ul>
+      <div class="tool-example">Ex: Générer "Un château fort en 3D vu de haut" avec le Studio Magique.</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-20" data-slide="20">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=diffit.me&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Diffit">
+        <span class="tool-logo-fallback">D</span>
+        <div class="tool-title-block">
+          <h2>Diffit</h2>
+          <a href="https://diffit.me" target="_blank" rel="noopener">diffit.me</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/T-Qs5ytRNig" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/T-Qs5ytRNig/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/T-Qs5ytRNig/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> L'outil ultime pour la différenciation pédagogique.</div>
+      <ul class="tool-features">
+        <li>Adapte un même texte pour différents niveaux de lecture</li>
+        <li>Traduit instantanément pour les élèves allophones</li>
+      </ul>
+      <div class="tool-example">Ex: Transformer un article du Monde pour qu'il soit lisible par un élève de CE2.</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-21" data-slide="21">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=curipod.com&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Curipod">
+        <span class="tool-logo-fallback">C</span>
+        <div class="tool-title-block">
+          <h2>Curipod</h2>
+          <a href="https://curipod.com" target="_blank" rel="noopener">curipod.com</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/KRG56wroPL8" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/KRG56wroPL8/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/KRG56wroPL8/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> Pour des présentations interactives (comme Kahoot ou Mentimeter) générées par IA.</div>
+      <ul class="tool-features">
+        <li>Génère des slides, des sondages et des nuages de mots</li>
+        <li>Augmente la participation en classe</li>
+      </ul>
+      <div class="tool-example">Ex: "Crée un cours de 5 slides sur les planètes avec 1 sondage interactif."</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-22" data-slide="22">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=magicschool.ai&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="MagicSchool">
+        <span class="tool-logo-fallback">M</span>
+        <div class="tool-title-block">
+          <h2>MagicSchool AI</h2>
+          <a href="https://www.magicschool.ai" target="_blank" rel="noopener">magicschool.ai</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/pX7KQszwCqg" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/pX7KQszwCqg/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/pX7KQszwCqg/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> Le couteau suisse complet, pensé par et pour les profs.</div>
+      <ul class="tool-features">
+        <li>Plans de cours, mots aux parents, règles de classe</li>
+        <li>Générateurs d'idées d'expériences scientifiques</li>
+      </ul>
+      <div class="tool-example">Ex: Utiliser le "Constructeur de grille d'évaluation (Rubric)" pour un exposé.</div>
+    </section>
+
+    <section class="slide tool-slide" id="slide-23" data-slide="23">
+      <div class="tool-header">
+        <img src="https://www.google.com/s2/favicons?domain=quizizz.com&sz=128" class="tool-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Quizizz">
+        <span class="tool-logo-fallback">Q</span>
+        <div class="tool-title-block">
+          <h2>Quizizz (avec IA)</h2>
+          <a href="https://quizizz.com" target="_blank" rel="noopener">quizizz.com</a>
+        </div>
+      </div>
+      <a href="https://youtu.be/mx5JciAzdhI" target="_blank" class="yt-thumb-link">
+        <img src="https://img.youtube.com/vi/mx5JciAzdhI/maxresdefault.jpg" alt="Vidéo YouTube" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/mx5JciAzdhI/hqdefault.jpg'">
+        <span class="yt-play-btn">▶</span>
+      </a>
+      <div class="tool-what"><strong>C'est quoi ?</strong> L'outil star pour l'évaluation formative amusante.</div>
+      <ul class="tool-features">
+        <li>Import d'un texte ou URL et génération instantanée du quiz</li>
+        <li>L'IA adapte la difficulté en fonction du niveau</li>
+      </ul>
+      <div class="tool-example">Ex: "Colle le lien Wikipédia sur les volcans = Quiz prêt en 1 seconde."</div>
+    </section>
+
+    <section class="slide" id="slide-24" data-slide="24">
+      <h2>Récapitulatif — 8 outils, tous gratuits</h2>
+      <div class="table-scroll-wrapper">
+        <table class="tools-table">
+          <thead>
+            <tr><th>Outil</th><th>Usage principal</th><th>Gratuit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" class="mini-logo"> ChatGPT</div></td><td>Assistant texte général</td><td>✅</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" class="mini-logo"> NotebookLM</div></td><td>IA sur documents persos</td><td>✅</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" class="mini-logo"> Gamma AI</div></td><td>Présentations / Documents</td><td>✅</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" class="mini-logo"> Canva</div></td><td>Création visuelle / Images</td><td>✅ (Education)</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=diffit.me&sz=128" class="mini-logo"> Diffit</div></td><td>Différenciation / Niveaux</td><td>✅</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=curipod.com&sz=128" class="mini-logo"> Curipod</div></td><td>Présentations interactives</td><td>✅</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=magicschool.ai&sz=128" class="mini-logo"> MagicSchool</div></td><td>Templates éducatifs tout faits</td><td>✅</td></tr>
+            <tr><td><div class="tool-row-header"><img src="https://www.google.com/s2/favicons?domain=quizizz.com&sz=128" class="mini-logo"> Quizizz</div></td><td>Génération auto de Quiz</td><td>✅</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="slide pause-slide alt" id="pause-2">
+      <h2>Pause — 10 minutes</h2>
+      <p>On reprend dans 10 minutes avec la démo live</p>
+    </section>
+
+    <section class="slide part-title" id="slide-25" data-slide="25">
+      <h2>On le fait ensemble maintenant</h2>
+      <p class="subtitle">Démos en direct</p>
+      <div class="logos-row">
+        <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" class="tool-logo" alt="1">
+        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" class="tool-logo" alt="2">
+        <img src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" class="tool-logo" alt="3">
+        <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" class="tool-logo" alt="4">
+      </div>
+      <div class="presenter-note">🎤 Ouvrir les onglets avant la reprise !</div>
+    </section>
+
+    <section class="slide demo-slide" id="slide-26" data-slide="26">
+      <div class="demo-header">
+        <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" class="tool-logo" alt="ChatGPT">
+        <h2>Démo live — ChatGPT</h2>
+      </div>
+      <h3>Ce qu'on va faire :</h3>
+      <ol class="demo-steps">
+        <li>Générer une autorisation de sortie</li>
+        <li>La décliner sur 3 tons différents</li>
+      </ol>
+      <pre class="prompt-box">Agis comme un directeur d'école. Rédige un mot aux parents pour demander une autorisation de sortie au Louvre le mardi 15 mars. Précise de prévoir un pique-nique. Sois formel puis propose une version humoristique.</pre>
+    </section>
+    <section class="slide demo-slide" id="slide-27" data-slide="27">
+      <div class="demo-header">
+        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" class="tool-logo" alt="NotebookLM">
+        <h2>Démo live — NotebookLM</h2>
+      </div>
+      <h3>Ce qu'on va faire :</h3>
+      <ol class="demo-steps">
+        <li>Uploader un document PDF</li>
+        <li>Générer un QCM sans erreur</li>
+      </ol>
+      <pre class="prompt-box">Crée un QCM de 5 questions basé UNIQUEMENT sur ce document. Fournis le corrigé à la fin.</pre>
+    </section>
+    <section class="slide demo-slide" id="slide-28" data-slide="28">
+      <div class="demo-header">
+        <img src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" class="tool-logo" alt="Gamma">
+        <h2>Démo live — Gamma AI</h2>
+      </div>
+      <h3>Ce qu'on va faire :</h3>
+      <ol class="demo-steps">
+        <li>Générer une présentation complète</li>
+        <li>Personnaliser le design</li>
+      </ol>
+      <pre class="prompt-box">Crée une présentation de 6 slides sur les volcans pour des élèves de CM1. Inclus des images, des définitions et une conclusion.</pre>
+    </section>
+    <section class="slide demo-slide" id="slide-29" data-slide="29">
+      <div class="demo-header">
+        <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" class="tool-logo" alt="Canva">
+        <h2>Démo live — Canva</h2>
+      </div>
+      <h3>Ce qu'on va faire :</h3>
+      <ol class="demo-steps">
+        <li>Générer une image avec l'IA Magique</li>
+        <li>Construire une slide illustrée</li>
+      </ol>
+      <div class="presenter-note">🎤 Montrer comment générer le visuel depuis « Éléments > Générateur IA »</div>
+    </section>
+
+    <section class="slide" id="slide-30" data-slide="30">
+      <h2>Les 3 choses à retenir</h2>
+      <div class="retenir-cards">
+        <div class="retenir-card">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <p><strong>L'IA est un assistant, pas un remplaçant</strong></p>
+        </div>
+        <div class="retenir-card">
+          <svg viewBox="0 0 24 24"><path d="M12.65 10A5.99 5.99 0 0 0 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6a5.99 5.99 0 0 0 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+          <p><strong>Le prompt est la clé</strong></p>
+        </div>
+        <div class="retenir-card">
+          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+          <p><strong>Ces 8 outils sont gratuits dès demain</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-31" data-slide="31">
+      <h2>Tous les liens en un endroit</h2>
+      <div class="split-content">
+        <ul class="resources-list">
+          <li><a href="https://chatgpt.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" class="mini-logo"> ChatGPT</a></li>
+          <li><a href="https://notebooklm.google.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" class="mini-logo"> NotebookLM</a></li>
+          <li><a href="https://gamma.app" target="_blank"><img src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" class="mini-logo"> Gamma AI</a></li>
+          <li><a href="https://canva.com/education" target="_blank"><img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" class="mini-logo"> Canva</a></li>
+          <li><a href="https://diffit.me" target="_blank"><img src="https://www.google.com/s2/favicons?domain=diffit.me&sz=128" class="mini-logo"> Diffit</a></li>
+          <li><a href="https://curipod.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=curipod.com&sz=128" class="mini-logo"> Curipod</a></li>
+          <li><a href="https://magicschool.ai" target="_blank"><img src="https://www.google.com/s2/favicons?domain=magicschool.ai&sz=128" class="mini-logo"> MagicSchool</a></li>
+          <li><a href="https://quizizz.com" target="_blank"><img src="https://www.google.com/s2/favicons?domain=quizizz.com&sz=128" class="mini-logo"> Quizizz</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-32" data-slide="32">
+      <div style="text-align: center; width: 100%;">
+        <h2>Vos questions</h2>
+        <img src="assets/svg/hand-raise.svg" alt="Main levée" style="width: 250px; margin: 40px auto; display: block;">
+      </div>
+    </section>
+
+    <section class="slide" id="slide-33" data-slide="33">
+      <div style="text-align: center; width: 100%;">
+        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem);">Merci pour votre attention et votre engagement</h2>
+        <p class="highlight-phrase" style="margin-bottom:40px;">Essayez un seul outil cette semaine avec vos élèves — juste un</p>
+        <div class="contact-box">
+          <p>Formateur : Dhiya Eddine El Gabsi</p>
+          <p>dhiyaguebsi@gmail.com</p>
+          <p>92 950 655</p>
+        </div>
+        <p class="final-quote">"L'IA ne remplace pas le bon enseignant — elle lui donne plus de temps pour ce qui compte vraiment"</p>
+        <img src="assets/logos/logo_integrale-removebg-preview.png" alt="Logo Intégrale" style="height: 80px; margin: 0 auto 30px; display: block;">
+        <div class="logos-row">
+          <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=diffit.me&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=curipod.com&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=magicschool.ai&sz=128" class="mini-logo">
+          <img src="https://www.google.com/s2/favicons?domain=quizizz.com&sz=128" class="mini-logo">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button id="back-to-top" aria-label="Retour en haut">↑</button>
+  <script src="script.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        regs.forEach(r => r.unregister());
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* === 1. RESET & BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); color: #333; overflow-x: hidden; background: #fff; scroll-behavior: smooth; }
+h1, h2, h3 { font-family: var(--font-title); }
+ul, ol { list-style-position: inside; }
+a { color: inherit; text-decoration: none; }
+
+/* === 2. VARIABLES & ROOT === */
+:root {
+  --color-primary: #1a1a6e;
+  --color-secondary: #6a0dad;
+  --color-gradient: linear-gradient(135deg, #1a1a6e, #6a0dad);
+  --color-accent: #f5f5f5;
+  --color-good: #e8f5e9;
+  --color-bad: #ffebee;
+  --color-note: #fffde7;
+  --color-note-border: #f57c00;
+  --color-pause-cafe: linear-gradient(135deg, #f57c00, #ffb300);
+  --color-pause-2: linear-gradient(135deg, #0288d1, #26c6da);
+  --color-part2: linear-gradient(135deg, #1a003e, #0d1b5e);
+  --color-part4: linear-gradient(135deg, #1b5e20, #0d47a1);
+  --color-end: linear-gradient(135deg, #1a1a6e, #6a0dad);
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --transition: 0.3s ease;
+}
+
+/* === 4. MENU HAMBURGER & SIDEBAR === */
+#sidebar-menu {
+  position: fixed; top: 0; left: -300px; width: 280px; height: 100vh;
+  background: white; color: #333; z-index: 999; box-shadow: var(--shadow);
+  transition: var(--transition); overflow-y: auto; padding: 20px;
+}
+#sidebar-menu.open { left: 0; }
+#sidebar-menu ul { list-style: none; }
+#sidebar-menu li { margin-bottom: 15px; }
+#sidebar-menu a { display: block; font-weight: 500; transition: var(--transition); padding: 5px; border-radius: 4px; }
+#sidebar-menu a:hover { background: var(--color-accent); color: var(--color-primary); }
+
+/* === 5. MODE PRÉSENTATION === */
+body.presentation-mode #sidebar-menu { left: -300px; }
+body.presentation-mode main {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+body.presentation-mode .slide {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; justify-content: center;
+  padding-top: 20px;
+}
+
+/* === 6. TOGGLE NOTES PRÉSENTATEUR === */
+.presenter-note {
+  background: var(--color-note);
+  border-left: 5px solid var(--color-note-border);
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  color: #555;
+  transition: var(--transition);
+}
+body.notes-hidden .presenter-note { display: none; }
+
+/* === 7. SLIDES — BASE === */
+main { padding-top: 0; }
+.slide {
+  padding: 40px 5%;
+  border-bottom: 1px solid #ddd;
+  opacity: 0; transform: translateY(30px);
+}
+.slide.visible { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+.slide h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 15px; color: var(--color-primary); }
+.placeholder-box {
+  border: 2px dashed #ccc; padding: 20px; text-align: center;
+  background: rgba(255,255,255,0.5); border-radius: var(--radius);
+  margin: 20px 0;
+  color: #777;
+}
+
+/* === 8. SLIDE 1 — TITRE === */
+#slide-1 { background: var(--color-gradient); color: white; position: relative; }
+#slide-1 h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 10px; }
+#slide-1 .subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 40px; }
+#slide-1 .hero-svg { position: absolute; top: 80px; right: 5%; width: clamp(100px, 15vw, 200px); }
+#slide-1 .slide-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
+#slide-1 .slide-footer .placeholder-box { border-color: rgba(255,255,255,0.5); color: white; background: rgba(0,0,0,0.1); }
+
+/* === 9. SLIDE 2 — ACCROCHE === */
+.grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+.card-logo { border: 1px solid #eee; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; }
+.card-logo img { width: 40px; height: 40px; border-radius: 50%; }
+.bold-conclusion { font-weight: 700; font-size: 1.2rem; color: var(--color-secondary); text-align: center; margin-top: 20px; }
+
+/* === 10. SLIDES 3 & 6 — VIDÉO === */
+.video-placeholder {
+  background: #000; border-radius: var(--radius); aspect-ratio: 16/9;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: white; cursor: pointer; transition: var(--transition);
+}
+.video-placeholder:hover { transform: scale(1.02); }
+.play-icon { font-size: 4rem; margin-bottom: 10px; color: #f00; }
+.yt-iframe { width: 100%; aspect-ratio: 16/9; border-radius: var(--radius); }
+.yt-thumb-link { display: block; position: relative; width: 100%; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; margin: 20px 0; }
+.yt-thumb { width: 100%; height: 100%; object-fit: cover; }
+.yt-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 5rem; color: #ff0000; text-shadow: 0 2px 10px rgba(0,0,0,0.5); transition: transform 0.2s; }
+.yt-thumb-link:hover .yt-play-btn { transform: translate(-50%,-50%) scale(1.1); }
+
+/* === 11. SLIDE 4 — DÉFINITION === */
+.quote-box { background: var(--color-accent); padding: 20px; border-left: 6px solid var(--color-secondary); font-size: 1.2rem; font-style: italic; margin-bottom: 20px; border-radius: 0 var(--radius) var(--radius) 0; }
+.split-content { display: flex; gap: 25px; align-items: center; }
+.split-content > * { flex: 1; }
+.split-content > div > img { width: 100%; max-width: 400px; }
+.split-content > img { width: 100%; max-width: 400px; }
+
+/* === 12. SLIDE 5 — FRISE CHRONOLOGIQUE === */
+.timeline { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 30px; position: relative; }
+.timeline::before { content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 4px; background: #ddd; z-index: 0; }
+.timeline-item { position: relative; z-index: 1; text-align: center; width: 20%; }
+.timeline-dot { width: 34px; height: 34px; border-radius: 50%; border: 4px solid white; margin: 0 auto 15px; }
+.timeline-item:nth-child(1) .timeline-dot { background: #1976d2; }
+.timeline-item:nth-child(2) .timeline-dot { background: #7b1fa2; }
+.timeline-item:nth-child(3) .timeline-dot { background: #f57c00; }
+.timeline-item:nth-child(4) .timeline-dot { background: #388e3c; }
+.timeline-year { font-weight: 700; font-size: 1.2rem; margin-bottom: 5px; }
+
+/* === 13. SLIDE 7 — ÉDUCATION === */
+.highlight-phrase { color: var(--color-secondary); font-weight: 700; font-size: 1.3rem; margin-top: 20px; }
+.stats-box { background: #e8f5e9; padding: 15px; border-radius: var(--radius); margin: 15px 0; border-left: 5px solid #388e3c; }
+.stat-item { margin-bottom: 8px; font-size: 0.95rem; }
+.stat-number { font-weight: 700; color: var(--color-primary); font-size: 1.1rem; }
+
+/* === 14. SLIDE 8 — PARTIE 2 === */
+.part-title { background: var(--color-part2); color: white; text-align: center; align-items: center;}
+.part-title h2 { color: white; font-size: clamp(2.5rem, 6vw, 4rem); }
+.part-title > img { margin: 40px auto 0; width: 100%; max-width: 300px; }
+
+/* === 15. SLIDE 9 — PROMPT === */
+.huge-text { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--color-primary); text-align: center; margin: 40px 0; }
+
+/* === 16. SLIDES 10-13 — RÈGLES === */
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+.rule-bad, .rule-good { padding: 15px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.rule-bad { background: var(--color-bad); border-left: 5px solid #d32f2f; }
+.rule-good { background: var(--color-good); border-left: 5px solid #388e3c; }
+.key-message { font-size: 1.2rem; font-weight: 600; padding: 15px; background: #e3f2fd; border-radius: var(--radius); color: #1565c0; }
+
+/* === 17. SLIDE 14 — FORMULE MAGIQUE === */
+.magic-formula { background: var(--color-gradient); color: white; padding: 30px; border-radius: var(--radius); text-align: center; margin-bottom: 30px; font-size: 1.5rem; font-weight: 700; }
+.components-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+.component-card { background: white; border: 1px solid #ddd; padding: 20px; text-align: center; border-radius: var(--radius); box-shadow: var(--shadow); }
+.component-card span { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+/* === 18. SLIDE 15 — ERREURS === */
+#slide-15 { background: #fff3e0; }
+.errors-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.error-card { background: white; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; font-weight: 500; }
+
+/* === 19. SLIDES PAUSE === */
+.pause-slide { background: var(--color-pause-cafe); color: white; text-align: center; justify-content: center; }
+.pause-slide.alt { background: var(--color-pause-2); }
+.pause-slide h2 { color: white; font-size: clamp(3rem, 8vw, 5rem); }
+
+/* === 20. SLIDES 16-23 — OUTILS === */
+.tool-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.tool-logo { width: 60px; height: 60px; border-radius: 12px; object-fit: contain; }
+.tool-logo-fallback { width: 60px; height: 60px; border-radius: 12px; background: var(--color-primary); color: white; display: none; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; }
+.tool-title-block h2 { margin-bottom: 5px; }
+.tool-what { background: #e3f2fd; padding: 15px; border-radius: var(--radius); margin: 15px 0; border-left: 5px solid #1976d2; }
+.tool-example { background: #f3e5f5; padding: 15px; border-radius: var(--radius); font-style: italic; color: #4a148c; margin-top: 15px; }
+.tool-features { margin-left: 20px; line-height: 1.8; }
+
+/* === 21. SLIDE 24 — TABLEAU RÉCAP === */
+.table-scroll-wrapper { overflow-x: auto; }
+.tools-table { width: 100%; border-collapse: collapse; background: white; box-shadow: var(--shadow); border-radius: var(--radius); overflow: hidden; }
+.tools-table th, .tools-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+.tools-table th { background: var(--color-primary); color: white; }
+.tool-row-header { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.mini-logo { width: 24px; height: 24px; border-radius: 4px; object-fit: contain; }
+
+/* === 22. SLIDE 25 — PARTIE 4 === */
+#slide-25.part-title { background: var(--color-part4); }
+
+/* === 23. SLIDES 26-29 — DÉMOS === */
+.demo-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.prompt-box { background: #282c34; color: #abb2bf; padding: 20px; border-radius: var(--radius); font-family: monospace; white-space: pre-wrap; margin: 20px 0; overflow-x: auto; }
+
+/* === 24. SLIDE 30 — RETENIR === */
+.retenir-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+.retenir-card { background: white; padding: 20px 15px; text-align: center; border-radius: var(--radius); box-shadow: var(--shadow); border-top: 5px solid var(--color-secondary); }
+.retenir-card svg { width: 40px; height: 40px; fill: var(--color-primary); margin-bottom: 15px; }
+
+/* === 25. SLIDE 31 — RESSOURCES === */
+.resources-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style: none; padding: 0; }
+.resources-list li a { display: flex; align-items: center; gap: 15px; padding: 15px; border: 1px solid #ddd; border-radius: var(--radius); transition: var(--transition); }
+.resources-list li a:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: var(--color-primary); }
+
+/* === 26. SLIDE 32 — Q&A === */
+#slide-32 { text-align: center; }
+#slide-32 img { max-width: 250px; margin: 40px auto; }
+
+/* === 27. SLIDE 33 — FIN === */
+#slide-33 { background: var(--color-end); color: white; }
+#slide-33 h2 { color: white; }
+.contact-box { background: rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius); margin: 30px 0; border: 1px solid rgba(255,255,255,0.2); }
+.final-quote { font-size: 1.5rem; font-style: italic; opacity: 0.9; margin: 30px 0; }
+.logos-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; justify-content: center; }
+
+/* === 28. BOUTON RETOUR HAUT === */
+#back-to-top { position: fixed; bottom: 30px; right: 30px; background: var(--color-primary); color: white; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; display: none; cursor: pointer; box-shadow: var(--shadow); z-index: 1000; transition: var(--transition); }
+#back-to-top:hover { transform: translateY(-5px); }
+
+/* === 29. ANIMATIONS FADE-IN === */
+/* Handled via .slide base classes */
+
+/* === 30. RESPONSIVE 768px === */
+@media (max-width: 768px) {
+  .grid-2x2, .rules-grid, .errors-list, .retenir-cards, .resources-list { grid-template-columns: 1fr; }
+  .split-content { flex-direction: column; }
+  .timeline { flex-direction: column; align-items: center; }
+  .timeline::before { width: 4px; height: 100%; top: 0; left: 50%; transform: translateX(-50%); }
+  .timeline-item { width: 100%; margin-bottom: 30px; }
+  .tool-header { flex-direction: column; text-align: center; }
+}
+
+/* === 31. RESPONSIVE 480px === */
+@media (max-width: 480px) {
+  .slide { padding: 30px 5%; }
+
+  .components-grid { grid-template-columns: 1fr; }
+}
+
+/* === 32. PRINT CSS === */
+@media print {
+  #sidebar-menu, #back-to-top, .presentation-mode-btn { display: none !important; }
+  body { background: white; color: black; }
+  .slide { page-break-after: always; min-height: auto; opacity: 1; transform: none; background: white !important; color: black !important; border-bottom: none; }
+  h1, h2, h3, .bold-conclusion, .highlight-phrase, .magic-formula { color: black !important; }
+  .quote-box, .rule-bad, .rule-good, .tool-what, .tool-example, .prompt-box, .contact-box { border: 2px solid #ccc; background: white !important; color: black !important; }
+  .video-placeholder { display: none; }
+  .presenter-note { display: block; border-left: 2px solid #000; background: #fff !important; color: #000 !important; }
+  .placeholder-box { border: 2px dashed #000; color: #000; }
+}
