@@ -84,9 +84,10 @@ main { padding-top: 0; }
 
 /* === 8. SLIDE 1 — TITRE === */
 #slide-1 { background: var(--color-gradient); color: white; position: relative; }
-#slide-1 h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 10px; }
-#slide-1 .subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 40px; }
-#slide-1 .hero-svg { position: absolute; top: 30px; right: 5%; }
+#slide-1 .hero-svg { display: block; margin: 0 auto 30px; position: static; }
+#slide-1 .title-container { text-align: center; width: 100%; }
+#slide-1 h1 { font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 10px; }
+#slide-1 .subtitle { font-size: clamp(1rem, 2.5vw, 1.5rem); opacity: 0.9; margin-bottom: 40px; }
 #slide-1 .slide-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
 #slide-1 .slide-footer .placeholder-box { border-color: rgba(255,255,255,0.5); color: white; background: rgba(0,0,0,0.1); }
 
@@ -225,6 +226,8 @@ main { padding-top: 0; }
   .timeline::before { width: 4px; height: 100%; top: 0; left: 50%; transform: translateX(-50%); }
   .timeline-item { width: 100%; margin-bottom: 30px; }
   .tool-header { flex-direction: column; text-align: center; }
+  #slide-1 .hero-svg { margin-bottom: 20px; }
+  #slide-1 .subtitle { margin-bottom: 30px; }
 }
 
 /* === 31. RESPONSIVE 480px === */
