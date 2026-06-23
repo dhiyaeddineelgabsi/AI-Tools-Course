@@ -82,6 +82,8 @@ Le mode présentation est activé par défaut. Il permet un défilement fluide a
 
 Le projet est déployé sur Vercel via `vercel.json` (non versionné dans ce repo).
 
+**Lien Vercel :** [https://project-2jnjo.vercel.app](https://project-2jnjo.vercel.app)
+
 ## Licence
 
 Propriété d'École Privée Intégrale — Usage interne pour la formation des enseignants.
